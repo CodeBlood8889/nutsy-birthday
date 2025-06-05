@@ -33,7 +33,7 @@ body {
 }
 
 .two {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: lighter;
 }
 
@@ -152,6 +152,7 @@ body {
 .idea-6 span,
 .wish-hbd span {
   display: inline-block;
+  white-space: pre;
 }
 
 .idea-6 span {
@@ -269,7 +270,8 @@ body {
 
 .wish-hbd {
   font-size: 3em;
-  margin: 0;
+  text-align: center;
+  margin: 0 auto;
   text-transform: uppercase;
 }
 

@@ -84,8 +84,9 @@ const animationTimeline = () => {
     .join("</span><span>")}</span>`;
 
   hbd.innerHTML = `<span>${hbd.innerHTML
-    .split("")
-    .join("</span><span>")}</span>`;
+  .split("")
+  .map((char) => char === " " ? "&nbsp;" : char)
+  .join("</span><span>")}</span>`;
 
   const ideaTextTrans = {
     opacity: 0,
@@ -126,7 +127,7 @@ const animationTimeline = () => {
     )
     .to(
       ".two",
-      0.7,
+      0.9,
       {
         opacity: 0,
         y: 10,
@@ -156,7 +157,7 @@ const animationTimeline = () => {
     })
     .staggerTo(
       ".hbd-chatbox span",
-      1.5,
+      1.9,
       {
         visibility: "visible",
       },
@@ -180,18 +181,18 @@ const animationTimeline = () => {
       },
       "+=1"
     )
-    .from(".idea-1", 0.7, ideaTextTrans)
-    .to(".idea-1", 0.7, ideaTextTransLeave, "+=2.5")
-    .from(".idea-2", 0.7, ideaTextTrans)
-    .to(".idea-2", 0.7, ideaTextTransLeave, "+=2.5")
-    .from(".idea-3", 0.7, ideaTextTrans)
-    .to(".idea-3 strong", 0.5, {
+    .from(".idea-1", 0.9, ideaTextTrans)
+    .to(".idea-1", 0.9, ideaTextTransLeave, "+=2.5")
+    .from(".idea-2", 0.9, ideaTextTrans)
+    .to(".idea-2", 0.9, ideaTextTransLeave, "+=2.5")
+    .from(".idea-3", 0.9, ideaTextTrans)
+    .to(".idea-3 strong", 0.7, {
       scale: 1.2,
       x: 10,
-      backgroundColor: "rgb(21, 161, 237)",
+      backgroundColor: "rgb(238, 108, 195)",
       color: "#fff",
     })
-    .to(".idea-3", 0.7, ideaTextTransLeave, "+=2.5")
+    .to(".idea-3", 0.9, ideaTextTransLeave, "+=2.5")
     .from(".idea-4", 0.7, ideaTextTrans)
     .to(".idea-4", 0.7, ideaTextTransLeave, "+=2.5")
     .from(
